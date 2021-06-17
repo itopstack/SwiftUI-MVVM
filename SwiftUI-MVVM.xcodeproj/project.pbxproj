@@ -16,6 +16,7 @@
 		3A47979F267B4AEF00947729 /* AnimeMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A47979E267B4AEF00947729 /* AnimeMetaData.swift */; };
 		3A4797A1267B4E4E00947729 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4797A0267B4E4E00947729 /* HTTPError.swift */; };
 		3A4797A5267B55D900947729 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4797A4267B55D900947729 /* AnimeCell.swift */; };
+		3A4797A8267B6B8300947729 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4797A7267B6B8300947729 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3A47979E267B4AEF00947729 /* AnimeMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMetaData.swift; sourceTree = "<group>"; };
 		3A4797A0267B4E4E00947729 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		3A4797A4267B55D900947729 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
+		3A4797A7267B6B8300947729 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		3A479786267B3FE900947729 /* SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				3A4797A6267B6AD300947729 /* Helper */,
 				3A479799267B450700947729 /* Scene */,
 				3A479796267B424300947729 /* Model */,
 				3A479787267B3FE900947729 /* SwiftUI_MVVMApp.swift */,
@@ -114,6 +117,14 @@
 			children = (
 			);
 			path = AnimeDetail;
+			sourceTree = "<group>";
+		};
+		3A4797A6267B6AD300947729 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3A4797A7267B6B8300947729 /* ImageLoader.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				3A479788267B3FE900947729 /* SwiftUI_MVVMApp.swift in Sources */,
 				3A479798267B425E00947729 /* Anime.swift in Sources */,
 				3A4797A1267B4E4E00947729 /* HTTPError.swift in Sources */,
+				3A4797A8267B6B8300947729 /* ImageLoader.swift in Sources */,
 				3A47979F267B4AEF00947729 /* AnimeMetaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

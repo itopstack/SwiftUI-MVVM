@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct AnimeCell: View {
     let anime: Anime
+    @StateObject var imageLoader = ImageLoader()
     
     var body: some View {
         HStack {
-            Image("anime_placeholder")
+            Image(uiImage: imageLoader.uiImage ?? UIImage(named: "anime_cell_placeholder")!)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80, height: 80)
+                .onAppear {
+                    imageLoader.fetchImage(urlString: anime.imageURL)
+                }
             
             Text(anime.title)
             
@@ -33,7 +38,7 @@ struct AnimeCell_Previews: PreviewProvider {
 }
 
 let dummyAnime = Anime(title: "86",
-                       imageURL: URL(string: "https://cdn.myanimelist.net/images/anime/1104/113797.jpg?s=ca67432d653a721fa3a5f6770c25bdd6")!,
+                       imageURL: "https://cdn.myanimelist.net/images/anime/1104/113797.jpg?s=ca67432d653a721fa3a5f6770c25bdd6",
                        url: "https://myanimelist.net/anime/41457/86",
                        type: "TV",
                        totalEpisodes: 11,
