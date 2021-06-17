@@ -38,12 +38,8 @@ struct AnimeCell_Previews: PreviewProvider {
 }
 
 let dummyAnime = Anime(title: "86",
-                       imageURL: "https://cdn.myanimelist.net/images/anime/1104/113797.jpg?s=ca67432d653a721fa3a5f6770c25bdd6",
                        url: "https://myanimelist.net/anime/41457/86",
+                       imageURL: "https://cdn.myanimelist.net/images/anime/1104/113797.jpg?s=ca67432d653a721fa3a5f6770c25bdd6",
                        type: "TV",
                        totalEpisodes: 11,
-                       seasonName: "Spring",
-                       seasonYear: 2021,
-                       rating: "R",
-                       startDate: Date(),
-                       endDate: Date())
+                       rating: "R")

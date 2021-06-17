@@ -19,7 +19,7 @@ final class ImageLoader: ObservableObject {
         self.session = session
     }
     
-    func fetchImage(urlString: String) {
+    func fetchImage(urlString: String, completion: ((UIImage?) -> Void)? = nil) {
         guard let url = URL(string: urlString) else { return }
         
         cancellable = session.dataTaskPublisher(for: url)
@@ -28,7 +28,9 @@ final class ImageLoader: ObservableObject {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
             .sink(receiveValue: { data in
-                self.uiImage = UIImage(data: data)
+                let uiImage = UIImage(data: data)
+                self.uiImage = uiImage
+                completion?(uiImage)
             })
     }
 }

@@ -13,7 +13,11 @@ struct AnimesContentView: View {
     var body: some View {
         NavigationView {
             List(viewModel.animes) { anime in
-                AnimeCell(anime: anime)
+                let animeDetailViewModel = AnimeDetailViewViewModel(anime: anime)
+                
+                NavigationLink(destination: AnimeDetailView(viewModel: animeDetailViewModel)) {
+                    AnimeCell(anime: anime)
+                }
             }
             .alert(isPresented: $viewModel.needToShowAlert) {
                 Alert(title: Text(viewModel.errorMessage))
