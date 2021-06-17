@@ -15,6 +15,9 @@ struct AnimesContentView: View {
             List(viewModel.animes) { anime in
                 AnimeCell(anime: anime)
             }
+            .alert(isPresented: $viewModel.needToShowAlert) {
+                Alert(title: Text(viewModel.errorMessage))
+            }
             .navigationTitle("Animes")
             .onAppear {
                 viewModel.fetchAnimes()

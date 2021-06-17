@@ -10,7 +10,14 @@ import Combine
 
 final class AnimesContentViewViewModel: ObservableObject {
     @Published var animes: [Anime] = []
-    @Published var error: Error?
+    @Published var needToShowAlert = false {
+        didSet {
+            if !needToShowAlert {
+                errorMessage = ""
+            }
+        }
+    }
+    var errorMessage = ""
     
     private let session: URLSession
     private let decoder: JSONDecoder
@@ -40,7 +47,8 @@ final class AnimesContentViewViewModel: ObservableObject {
                 case .finished:
                     break
                 case .failure(let error):
-                    self.error = error
+                    self.errorMessage = error.localizedDescription
+                    self.needToShowAlert = true
                 }
             }, receiveValue: { animeMetaData in
                 self.animes = animeMetaData.animes
