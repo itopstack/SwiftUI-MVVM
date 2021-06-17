@@ -15,6 +15,7 @@
 		3A47979D267B45A400947729 /* AnimesContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A47979C267B45A400947729 /* AnimesContentViewViewModel.swift */; };
 		3A47979F267B4AEF00947729 /* AnimeMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A47979E267B4AEF00947729 /* AnimeMetaData.swift */; };
 		3A4797A1267B4E4E00947729 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4797A0267B4E4E00947729 /* HTTPError.swift */; };
+		3A4797A5267B55D900947729 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4797A4267B55D900947729 /* AnimeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3A47979C267B45A400947729 /* AnimesContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimesContentViewViewModel.swift; sourceTree = "<group>"; };
 		3A47979E267B4AEF00947729 /* AnimeMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMetaData.swift; sourceTree = "<group>"; };
 		3A4797A0267B4E4E00947729 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		3A4797A4267B55D900947729 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +93,27 @@
 		3A479799267B450700947729 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				3A47979A267B454700947729 /* AnimesContentView.swift */,
-				3A47979C267B45A400947729 /* AnimesContentViewViewModel.swift */,
+				3A4797A2267B558A00947729 /* AnimeList */,
+				3A4797A3267B55A100947729 /* AnimeDetail */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		3A4797A2267B558A00947729 /* AnimeList */ = {
+			isa = PBXGroup;
+			children = (
+				3A47979A267B454700947729 /* AnimesContentView.swift */,
+				3A47979C267B45A400947729 /* AnimesContentViewViewModel.swift */,
+				3A4797A4267B55D900947729 /* AnimeCell.swift */,
+			);
+			path = AnimeList;
+			sourceTree = "<group>";
+		};
+		3A4797A3267B55A100947729 /* AnimeDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AnimeDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4797A5267B55D900947729 /* AnimeCell.swift in Sources */,
 				3A47979D267B45A400947729 /* AnimesContentViewViewModel.swift in Sources */,
 				3A47979B267B454700947729 /* AnimesContentView.swift in Sources */,
 				3A479788267B3FE900947729 /* SwiftUI_MVVMApp.swift in Sources */,

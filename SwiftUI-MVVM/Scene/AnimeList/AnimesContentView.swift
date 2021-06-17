@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct AnimesContentView: View {
-    var viewModel: AnimesContentViewViewModel!
+    @StateObject var viewModel: AnimesContentViewViewModel
     
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(viewModel.animes) { anime in
+                AnimeCell(anime: anime)
+            }
+            .navigationTitle("Animes")
             .onAppear {
                 viewModel.fetchAnimes()
             }
+        }
     }
 }
 
